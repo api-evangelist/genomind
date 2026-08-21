@@ -1,0 +1,119 @@
+generated: '2026-08-21'
+method: probed
+source: >-
+  Direct HTTP probes of /.well-known/* on every Genomind host discovered in this pass
+  (marketing site plus the three login-gated portals). No host served a real document.
+note: >-
+  Every /.well-known/* path 404s on genomind.com and gateway.genomind.com. On
+  portal.genomind.com and partner.genomind.com the ASP.NET application answers with its
+  login shell (HTTP 200, text/html) or a runtime-error page for EVERY unknown path,
+  including /.well-known/openid-configuration, /.well-known/api-catalog, /api/ and
+  /graphql — those 200s are SPA/catch-all false positives, not documents, so they are
+  recorded as misses. No WellKnown or SecurityTxt pointer is emitted from this probe.
+hosts:
+- host: genomind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: portal.genomind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: HTML login shell, not a document — catch-all false positive.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: HTML login shell, not a document — catch-all false positive.
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    note: HTML login shell, not a document — catch-all false positive.
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: my.genomind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: partner.genomind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 500
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+    file: null
+  - path: /.well-known/api-catalog
+    status: 500
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: gateway.genomind.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

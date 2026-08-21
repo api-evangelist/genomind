@@ -1,0 +1,42 @@
+generated: '2026-08-21'
+method: searched
+source: https://genomind.com/cost-and-coverage/
+note: >-
+  Genomind sells a laboratory test, not an API product, so there are no API plans, quotas or
+  overages to record. The only published price is the consumer self-pay price for the At-Home PGx
+  test. Provider/health-system pricing and the EMR interface are quoted through sales and are not
+  published. plan_count counts the one published, priced offering.
+plan_count: 1
+currency: USD
+plans:
+- name: Genomind At-Home PGx Test (self-pay)
+  price: 599
+  currency: USD
+  billing_period: one-time
+  audience: US residents (direct-to-consumer)
+  included: >-
+    One 26-gene pharmacogenetic panel (15 pharmacodynamic, 11 pharmacokinetic genes) assessing
+    more than 700 medications, plus report sharing with the patient's provider at no extra cost.
+  overage: null
+  limits: []
+  quote: '"$599 one-time payment when registering."'
+  payment_methods:
+  - major credit and debit cards
+  - HSA
+  - FSA
+  - Apple Pay
+  - Google Pay
+  - PayPal
+  - Venmo
+  - Affirm (installment plans)
+  source: https://genomind.com/cost-and-coverage/
+unpriced_offerings:
+- name: Provider / health-system ordering and EMR interface
+  note: >-
+    No published price. Genomind states insurance does not universally cover comprehensive PGx
+    testing and reimbursement is not guaranteed; provider ordering runs through the provider
+    portal and contracted EMR interfaces, both arranged through sales.
+  source: https://genomind.com/who-we-support/providers/get-started/
+- name: International ordering
+  note: 'Pricing differs outside the US; the page directs non-US customers to contact Genomind.'
+  source: https://genomind.com/cost-and-coverage/

@@ -1,0 +1,26 @@
+generated: '2026-08-21'
+method: searched
+source: >-
+  Registry searches against npm, PyPI, RubyGems and the GitHub API on 2026-08-21, plus the
+  Genomind website and provider pages.
+note: >-
+  No first-party Genomind client library exists anywhere. npm registry search for "genomind"
+  returns 0 packages; pypi.org/pypi/genomind/json returns 404; rubygems.org/api/v1/gems/genomind.json
+  returns 404; api.github.com/orgs/genomind returns 404 (there is no Genomind GitHub organization,
+  and the eleven public repositories matching the string belong to unrelated individuals). No SDK,
+  CLI or SourceCode link appears anywhere on genomind.com. No Packages or SDKs pointer is emitted.
+package_count: 0
+packages: []
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=genomind
+  result: 0 packages
+- registry: pypi
+  query: https://pypi.org/pypi/genomind/json
+  result: 404
+- registry: rubygems
+  query: https://rubygems.org/api/v1/gems/genomind.json
+  result: 404
+- registry: github
+  query: https://api.github.com/orgs/genomind
+  result: 404 — no organization

@@ -1,0 +1,78 @@
+generated: '2026-08-21'
+method: searched
+source: https://genomind.com/compliance/
+note: >-
+  Genomind publishes no machine-readable contract (no OpenAPI, AsyncAPI, GraphQL SDL, WSDL or
+  .proto was found on any host in this pass), so no cross-cutting API standard — oauth2, oidc,
+  rfc9457, pagination, idempotency — can be asserted from a spec. Everything recorded here is a
+  laboratory / regulatory conformance published on the company's own compliance page, plus one
+  DOMAIN STANDARD that is claimed in a Genomind press release but NOT declared by any published
+  contract, and is therefore recorded as claimed-but-unverified rather than conformant.
+standards:
+- id: clia
+  name: Clinical Laboratory Improvement Amendments (CMS)
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: 'CLIA license number 39D2088097, issued under the US Centers for Medicare and Medicaid Services.'
+- id: cap
+  name: College of American Pathologists accreditation
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: 'CAP license number 9046391.'
+- id: ny-state-clinical-laboratory-permit
+  name: New York State Clinical Laboratory Permit
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: 'NY State certification number 9035.'
+- id: hipaa
+  name: Health Insurance Portability and Accountability Act
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: '"Genomind is fully compliant with HIPAA, HITECH, and GINA regulations."'
+- id: hitech
+  name: HITECH Act
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: '"Genomind is fully compliant with HIPAA, HITECH, and GINA regulations."'
+- id: gina
+  name: Genetic Information Nondiscrimination Act
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: '"Genomind is fully compliant with HIPAA, HITECH, and GINA regulations."'
+- id: state-clinical-laboratory-licenses
+  name: State clinical laboratory licenses (RI, PA, CA, MD)
+  conforms: true
+  evidence:
+    url: https://genomind.com/compliance/
+    detail: 'RI LCO00912, PA 34051, CA CDS-00800594, MD 2269.'
+domain_standards:
+- id: hl7v2-oru-lab-results
+  name: HL7 v2 laboratory orders and results messaging (ORM / ORU^R01)
+  market: clinical diagnostics / laboratory-to-EHR interfacing
+  claimed: true
+  conforms: false
+  evidence:
+    url: https://genomind.com/press/parkview-epic-integration/
+    detail: >-
+      Genomind's own press release describes completing "an interface for laboratory orders and
+      results" with Parkview Physicians Group's Epic EHR, which in practice is HL7 v2 messaging.
+      This is a PROSE claim on a press page; no contract, message profile, conformance profile or
+      implementation guide is published anywhere on a Genomind host, so the standard cannot be
+      read from the contract and conformance is NOT asserted here.
+- id: fhir
+  name: HL7 FHIR
+  market: clinical diagnostics / laboratory-to-EHR interfacing
+  claimed: false
+  conforms: false
+  evidence:
+    url: https://genomind.com/who-we-support/providers/
+    detail: >-
+      The providers page names EMR/EHR partners (Epic, athenahealth, NextGen Healthcare, DrChrono,
+      Practice Fusion, iSalus, MedEnt, Cerner "coming soon") but never names FHIR, publishes no
+      capability statement, and exposes no /fhir or /metadata endpoint on any probed host.

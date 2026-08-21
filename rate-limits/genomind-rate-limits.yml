@@ -1,0 +1,13 @@
+generated: '2026-08-21'
+method: searched
+source: https://genomind.com/
+note: >-
+  Genomind publishes no public API, no developer portal and no API reference, so there are no
+  documented rate limits, no published response headers (X-RateLimit-*, RateLimit-*, Retry-After)
+  and no documented exhaustion status code. This is an honest zero from a completed search across
+  genomind.com, portal.genomind.com, my.genomind.com, partner.genomind.com and
+  gateway.genomind.com — not an unchecked gap.
+limit_count: 0
+rate_limits: []
+response_headers: []
+exhaustion_status: null
