@@ -12,6 +12,17 @@ description: >-
   contracted HL7 v2 lab interface arranged per health system. In July 2026 Vanta Diagnostics
   acquired key Genomind assets, including the genetics lab, clinical operations and the
   direct-to-provider business, and the provider portal now carries Vanta Diagnostics branding.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://genomind.com/wp-content/uploads/2021/12/cropped-genomind_tag_full_color_pos_rgb.png
 url: https://raw.githubusercontent.com/api-evangelist/genomind/refs/heads/main/apis.yml
 x-type: company
